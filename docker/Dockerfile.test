@@ -1,0 +1,7 @@
+# Test image: the exact HA release we target plus its pytest harness.
+FROM ghcr.io/home-assistant/home-assistant:2026.9.4
+RUN uv pip install --system --index-strategy unsafe-best-match \
+    pytest-homeassistant-custom-component==0.13.367 \
+    pytest-cov ruff mypy
+WORKDIR /repo
+ENTRYPOINT []

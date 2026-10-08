@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.coverage
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.venv/
+e2e/.work/
+
+# Real exports must never be committed; only synthetic fixtures are allowed.
+*.csv
+!tests/fixtures/*.csv

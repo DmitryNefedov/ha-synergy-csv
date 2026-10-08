@@ -1,0 +1,39 @@
+[project]
+name = "ha-synergy-csv"
+version = "0.1.0"
+description = "Home Assistant integration: upload Synergy (WA) interval CSV files as long-term statistics"
+requires-python = ">=3.14"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-p no:cacheprovider"
+
+[tool.coverage.run]
+source = ["custom_components/synergy_csv"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 95
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+ignore = ["RUF001"]  # the summary deliberately uses an en dash in date ranges
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+ignore_missing_imports = true
+mypy_path = "/usr/src/homeassistant"  # HA is an editable install inside the test image
+files = ["custom_components/synergy_csv"]
+
+[[tool.mypy.overrides]]
+module = ["homeassistant.*"]
+ignore_errors = true
+implicit_reexport = true

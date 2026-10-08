@@ -1,0 +1,44 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add a Synergy meter",
+        "description": "Name the meter. After setup, use **Configure** on the integration to upload Interval Data Files.",
+        "data": { "meter_name": "Meter name" }
+      }
+    },
+    "error": {
+      "invalid_name": "The name must contain at least one letter or digit."
+    },
+    "abort": {
+      "already_configured": "A meter with this name is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Synergy CSV Import",
+        "menu_options": {
+          "upload": "Upload Interval Data File",
+          "delete": "Delete all data"
+        }
+      },
+      "upload": {
+        "title": "Upload Interval Data File",
+        "description": "Choose the CSV downloaded from Synergy. Uploads can be repeated; the newest upload wins for any 30-minute reading it contains.",
+        "data": { "file": "Interval Data File (.csv)" }
+      },
+      "summary": {
+        "title": "Upload complete",
+        "description": "{summary}"
+      },
+      "delete": {
+        "title": "Delete all data",
+        "description": "This permanently deletes every stored reading and every statistic of this meter. Submit to confirm."
+      }
+    },
+    "error": {
+      "invalid_file": "The file was rejected and nothing was stored. {error}"
+    }
+  }
+}
