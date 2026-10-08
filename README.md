@@ -10,8 +10,12 @@ Requires Home Assistant **2026.9** or later.
 
 ### HACS
 
-1. HACS → ⋮ → **Custom repositories** → add this repository's URL, category **Integration**.
-2. Install **Synergy (WA) CSV Import** and restart Home Assistant.
+[![Open your Home Assistant instance and open this repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=DmitryNefedov&repository=ha-synergy-csv&category=integration)
+
+1. Click the button above (it needs [HACS](https://hacs.xyz/) and a [My Home Assistant](https://my.home-assistant.io/) link to your instance), then **Download**.
+2. Restart Home Assistant.
+
+Without the button: HACS → ⋮ → **Custom repositories** → add `https://github.com/DmitryNefedov/ha-synergy-csv`, category **Integration**.
 
 ### Manual
 
@@ -19,7 +23,9 @@ Copy `custom_components/synergy_csv` into your `/config/custom_components/` and 
 
 ## Setup
 
-1. Settings → Devices & services → **Add integration** → *Synergy (WA) CSV Import*.
+[![Open your Home Assistant instance and start setting up this integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=synergy_csv)
+
+1. Click the button above, or go to Settings → Devices & services → **Add integration** → *Synergy (WA) CSV Import*.
 2. Name the meter (e.g. `Home`). One entry per Synergy meter.
 
 ## Uploading data
