@@ -1,13 +1,13 @@
 {
   "domain": "synergy_csv",
   "name": "Synergy (WA) CSV Import",
-  "codeowners": [],
+  "codeowners": ["@DmitryNefedov"],
   "config_flow": true,
   "dependencies": ["file_upload", "recorder"],
-  "documentation": "https://github.com/OWNER/ha-synergy-csv",
+  "documentation": "https://github.com/DmitryNefedov/ha-synergy-csv",
   "integration_type": "service",
   "iot_class": "calculated",
-  "issue_tracker": "https://github.com/OWNER/ha-synergy-csv/issues",
+  "issue_tracker": "https://github.com/DmitryNefedov/ha-synergy-csv/issues",
   "requirements": [],
   "version": "0.1.0"
 }
